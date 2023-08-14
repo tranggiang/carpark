@@ -32,7 +32,7 @@ To validate  latitude and longitude it requires fair amount of domain knowledge.
 
 It makes sense to cache data return to user.And we reset that cache after update car park availability data, in reality Redis could be used for this purpose.
 
-If the process of loading and update data takes long time we could consider to extract them to seperated project,the carpark now become stateless service.
+If the process of loading and update data takes long time we could consider to extract them to seperated project,the carpark now becomes stateless service.
 
 Another approach to this exercise is if the data is not to big we could keep them in memory and  do all the search with java stream.
 
