@@ -36,10 +36,6 @@ public class CarParkController {
         if (latitude == null || longitude == null || page < 0 || per_page < 1) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
-     /*   if (latitude < -90 || latitude > 90)
-            throw new IllegalArgumentException("latitude is not within range -90,90 " + latitude);
-        if (longitude < -180 || longitude > 180)
-            throw new IllegalArgumentException("latitude is not within range -180,180 " + longitude);*/
 
         logger.info("Find closest  parking location from latitude: {}, longitude: {}", latitude, longitude);
         Pageable paging = PageRequest.of(page, per_page);
