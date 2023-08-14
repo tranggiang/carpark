@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.locationtech.jts.geom.Point;
 
 public interface CarParkReport {
-
+    @JsonIgnore
     String getCarParkNumber();
 
     String getAddress();
@@ -14,6 +14,7 @@ public interface CarParkReport {
 
     Integer getTotal_lots();
 
+    @JsonIgnore
     Double getKm();
 
     Integer getAvailable_lots();
