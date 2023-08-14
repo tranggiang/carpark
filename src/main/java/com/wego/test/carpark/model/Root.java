@@ -1,9 +1,10 @@
 package com.wego.test.carpark.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Root {
-    public ArrayList<Item> getItems() {
+    public List<Item> getItems() {
         return this.items;
     }
 
@@ -11,6 +12,6 @@ public class Root {
         this.items = items;
     }
 
-    ArrayList<Item> items;
+    private List<Item> items;
 }
 

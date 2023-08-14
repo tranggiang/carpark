@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wego.test.carpark.util.GeometryUtil;
 import org.locationtech.jts.geom.Point;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -20,6 +17,7 @@ public class CarPark {
     @Transient
     private double longitude;
     @JsonIgnore
+    @Column(columnDefinition = "GEOMETRY")
     private Point point;
 
     private String carParkType;

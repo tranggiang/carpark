@@ -33,7 +33,7 @@ public class CarParkController {
             @RequestParam(required = false, defaultValue = "10") int per_page
 
     ) {
-        if (latitude == null || longitude == null || page > 0 || per_page < 1) {
+        if (latitude == null || longitude == null || page < 0 || per_page < 1) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
      /*   if (latitude < -90 || latitude > 90)
